@@ -11,8 +11,8 @@ class LSTM(nn.Module) :
         self.opt = opt
 
         # Create LSTM Layer Instance
-        self.lstm = nn.LSTM(opt.hid_channels, opt.hid_channels, num_layers=opt.num_layer, bidirectional=False, batch_first=True, dropout=opt.p)
-        self.bilstm = nn.LSTM(opt.hid_channels, opt.hid_channels//2, num_layers=opt.num_layer, bidirectional=True, batch_first=True, dropout=opt.p)
+        self.lstm = nn.LSTM(opt.hid_channels, opt.hid_channels, num_layers=opt.num_layer, bidirectional=False, batch_first=True, dropout=opt.p if opt.num_layer != 1 else 0)
+        self.bilstm = nn.LSTM(opt.hid_channels, opt.hid_channels//2, num_layers=opt.num_layer, bidirectional=True, batch_first=True, dropout=opt.p if opt.num_layer != 1 else 0)
 
         # Create FC Layer Instance
         self.input2lstm = nn.Linear(opt.in_channels, opt.hid_channels)
