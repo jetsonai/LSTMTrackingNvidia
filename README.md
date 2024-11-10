@@ -28,39 +28,51 @@ tar xzf Section2.tar.gz
 
 # Section 1 예제 
 
-cd Section1
+cd 'Section-1_(Image-Classification)'
 
-rnn lstm gru 순서로 train 실행
+python3 train_rnn.py
+
+python3 train_lstm.py
+
+python3 train_gru.py
 
 -----------------------------
 
 # Section 2 예제 
 
-cd Section2
+cd 'Section-2_(Sequential-Data-Analysis)'
 
 train test 실행
+
+python3 train.py
+
+python3 test.py
 
 -----------------------------
 
 # Section 3 예제 
 
-cd Section3
+cd 'Section-3_(Simulated-Vehicle-Trajectory-Tracking)'
 
-train test 실행
+python3 train.py
+
+python3 test.py
 
 -----------------------------
 
 # Section 4 예제 
 
-cd Section4
+cd 'Section-4_(Real-World-Vehicle-Trajectory-Tracking-1)'
 
-train test 실행
+python3 train.py
+
+python3 test.py
 
 -----------------------------
 
 # Section 5 예제 
 
-cd Section5
+cd 'Section-5_(Real-World-Vehicle-Trajectory-Tracking-2)'
 
 ### 순서대로 실행
 
